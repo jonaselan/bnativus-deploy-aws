@@ -13,11 +13,9 @@ phases:
     commands:
       # Set the SECRET_KEY_BASE environment variable for running tests
       - export SECRET_KEY_BASE=$(rake secret)
-      
-      - rails db:migrate
-      
+            
       # Run the tests using RSpec.
-      - rspec
+      # - rspec
 
 artifacts:
   type: zip
