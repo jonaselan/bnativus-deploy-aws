@@ -15,7 +15,7 @@ phases:
       - export SECRET_KEY_BASE=$(rake secret)
 
       # Run the tests using RSpec.
-      - rake db:migrate RAILS_ENV=test && rspec spec
+      - rspec
 
 artifacts:
   type: zip
