@@ -1,0 +1,51 @@
+.model-card {
+  .card{
+    border-radius: 3%;
+    &:hover {
+      border-color: $light-blue;
+      transition: all 0.30s ease-in-out;
+    }
+  }
+
+  .model-link{
+    color: black;
+  }
+
+  .card-body {
+    padding: 15px;
+    .card-created-at {
+      font-size: $font-small;
+      color: $dark-grey;
+    }
+    h4, h6 {
+      margin-top: 10px;
+    }
+    hr {
+      margin-top: 2rem;
+    }
+    .share-link-card {
+      i {
+        margin: 0 2px;
+      }
+    }
+    .card-actions {
+      margin-right: 12px;
+      i {
+        margin: 0 2px;
+      }
+    }
+
+    .card-username-posting, .card-username-room{
+      color: $dark-grey;
+      font-size: $font-tiny;
+    }
+
+    .card-username-posting{
+      margin: 0;
+    }
+
+    .card-username-room{
+      margin: 12px 0;
+    }
+  }
+}

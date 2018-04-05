@@ -1,23 +1,83 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  language_text: 'Language'
+  language_ptbr: 'Portuguese'
+  language_en: 'English'
+  language_es: 'Espanish'
+  begginer: 'Begginer'
+  upper_begginer: 'Upper Begginer'
+  intermediate: 'Intermediate'
+  upper_intermediate: 'Upper Intermediate'
+  advanced: 'Advanced'
+  upper_advanced: 'Upper Advanced'
+  native: 'Native'
+  music: 'music'
+  travel: 'travel'
+  news: 'news'
+  tv_radio: 'tv and radio'
+  film: 'film'
+  book: 'book'
+  podcast: 'podcast'
+  humor: 'humor'
+  documentaries: 'documentaries'
+  posts: 'articles'
+  animation: 'animations'
+  quotes: 'quotes'
+  stories: 'stories'
+  others: 'others'
+  sure?: 'Are you sure?'
+  rooms_text: Rooms
+  articles_text: Articles
+  suggestions: Suggestions?
+  create_room: Create new room
+  result_not_found: No results were found
+  continue: Continue
+  application:
+    hello: 'Hello'
+    signup: 'Sign Up'
+    signup_with: 'Sign Up with %{kind}'
+    loginin: 'Log In'
+    logout: 'Log Out'
+    invalid_infos: 'Email or password is invalid'
+  more_information:
+    almost_there: 'Almost There'
+    info_about_u: 'We need some more important information about you.'
+    where_u_from: 'Where you from?'
+    language_study: 'What language are you studying?'
+    main_language: 'What language do you speak?'
+  room_form:
+    create_room_description: "You need to share the room link you've created, so others can access it. To do so, follow these steps"
+    step_1: 'Be sure to have account'
+    step_2: Go to
+    step_3: Create a room and copy the link, this way
+    step_4: Paste the link in field on this form
+    step_5: Share on your social networks or through the link
+    copy: Copy
+    what_is_it: What is it?
+  users:
+    update:
+      notice: User was sucessfully updated
+  rooms:
+    create:
+      notice: Room was sucessfully creted
+    update:
+      notice: Room was sucessfully updated
+    destroy:
+      notice: Room was sucessfully deleted
+  debates:
+    create:
+      notice: Debate was sucessfully creted
+    update:
+      notice: Debate was sucessfully updated
+    destroy:
+      notice: Debate was sucessfully deleted
+  articles:
+    create:
+      notice: Article was sucessfully creted
+    update:
+      notice: Article was sucessfully updated
+    destroy:
+      notice: Article was sucessfully deleted
+  formats:
+      default: "%m-%d-%Y"
+      long: "%B %d, %Y"
+      short: "%b %d"

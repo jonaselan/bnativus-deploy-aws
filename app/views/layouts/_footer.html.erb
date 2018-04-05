@@ -1,0 +1,49 @@
+<footer>
+  <div id="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                  <h3> <%= t 'language_text' %> </h3>
+                  <ul>
+                    <li> <%= link_to_unless_current t('language_en'), locale: 'en' %> </li>
+                    <li> <%= link_to_unless_current t('language_es'), locale: 'es' %> </li>
+                    <li> <%= link_to_unless_current t('language_ptbr'), locale: 'pt-br' %> </li>
+                  </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                  <h3> Sobre </h3>
+                  <ul>
+                      <li> <a href="#"> <%= t '.ideia' %> </a> </li>
+                      <li> <a href="#"> <%= t '.team'  %></a> </li>
+                      <li> <a href="https://github.com/jonaselan" target="_blank"> <%= t '.contact' %> </a> </li>
+                      <li> <a href="https://github.com/jonaselan/BNativus" target="_blank"> <%= t '.contribute' %> </a> </li>
+                  </ul>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                  <h3> Navegar </h3>
+                  <ul>
+                      <li> <a href="https://goo.gl/forms/0rvlpwcR8SVcbj3m1" target="_blank"><%= t('suggestions') %></a></li>
+                      <li> <%= link_to t('rooms_text'), rooms_path, class: 'nav-link' %> </li>
+                      <li> <%= link_to 'Debates', debates_path, class: 'nav-link' %> </li>
+                      <li> <%= link_to t('articles_text'), articles_path, class: 'nav-link' %> </li>
+                      <li> <%= link_to 'Donate', class: 'nav-link' %> </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <p class="pull-left"> Copyright © Jonas Elan 2017. All right reserved. </p>
+            </div>
+            <div class="col-lg-6">
+              <ul class="nav pull-right social">
+                <li> <a href="#"> <i class=" fa fa-facebook"> </i></a></li>
+                <li> <a href="#"> <i class="fa fa-twitter"> </i></a></li>
+                <li> <a href="https://github.com/jonaselan/BNativus" target="_blank"> <i class="fa fa-github"> </i></a></li>
+                <!-- <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li> -->
+              </ul>
+            </div>
+          </div>
+      </div>
+  </div>
+</footer>

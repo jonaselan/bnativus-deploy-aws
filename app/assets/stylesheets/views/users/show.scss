@@ -1,0 +1,13 @@
+.container {
+  .user-aside-section, .user-main-section {
+    min-height: 750px;
+  }
+
+  .user-aside-section {
+    .user-aside-header{
+      text-align: center;
+      font-size: $font-tiny;
+      color: $dark-grey;
+    }
+  }
+}

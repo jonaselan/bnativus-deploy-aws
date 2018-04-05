@@ -1,0 +1,79 @@
+<div class="create-room-form">
+  <%= form_with(model: room, local: true) do |form| %>
+    <%= render partial: "shared/form_messages", locals: {model: room} %>
+
+    <div class="form-group">
+      <%= form.label Room.human_attribute_name(:language) %>
+      <br>
+      <%= form.select(:language_id, @languages, {}, { class: 'custom-select' }) %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label Room.human_attribute_name(:level) %>
+      <br>
+      <%= form.select(:level, [], {}, { :class => 'custom-select' }) do %>
+        <%= options_for_select(string_levels) %>
+      <% end %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :link %>
+      <small>
+        <a href="" data-toggle="modal" data-target="#exampleModalLong">
+          <%= t ('room_form.what_is_it') %></a>
+      </small>
+      <div class="row">
+        <div class="col-lg-10">
+          <%= form.text_field :link, class: 'form-control', id: 'link-room' %>
+        </div>
+        <div class="col-lg-2">
+          <button type="button" class="btn btn-info" id="btn-copy" name="button">
+            <%= t ('room_form.copy') %>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <%= form.submit 'Done', class: 'btn btn-success' %>
+    </div>
+  <% end %>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%= t('room_form.create_room_description') %>:
+          <hr>
+          1.
+          <%= t 'room_form.step_1' %>
+          <a href="https://accounts.google.com/SignUp" target="_blank">Google</a><br>
+          2.
+          <%= t 'room_form.step_2' %>
+          <a href="https://hangouts.google.com" target="_blank">
+            Google Hangout
+          </a><br>
+          3.
+          <%= t 'room_form.step_3' %>:
+          <%= image_tag("tutorial.gif", id: 'create-room-tutorial')  %>
+          <br>
+          4.
+          <%= t 'room_form.step_4' %>
+          <br>
+          5.
+          <%= t 'room_form.step_5' %>
+          <br>
+        </div>
+        <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div> -->
+      </div>
+    </div>
+  </div>
+</div>

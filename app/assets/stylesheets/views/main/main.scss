@@ -1,0 +1,62 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: $light-grey;
+  a {
+    color: $light-blue;
+    &:hover{
+      transition: all 0.30s ease-in-out;
+      color: $dark-blue;
+      text-decoration: none;
+    }
+  }
+  .main-div {
+    background-image: image-url("background.png");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    min-height: 400px;
+  }
+  .container-default {
+    padding: 17px;
+    box-shadow: -3px 3px 7px 2px $mid-grey;
+    border-radius: 6px;
+    background: white;
+
+    .more-models{
+      margin-top: 15px;
+    }
+  }
+}
+
+.btn-bnativus {
+  background-color: white;
+  color: black;
+  border: 1px solid $green;
+  cursor: pointer;
+  &:hover{
+    background-color: $green;
+    color: white;
+  }
+}
+
+.turbolinks-progress-bar {
+  height: 5px;
+  background-color: $light-blue;
+}
+
+#rooms {
+  .nav-link-room{
+    font-weight: bolder;
+  }
+}
+
+#debates {
+  .nav-link-debate{
+    font-weight: bolder;
+  }
+}
+
+#articles {
+  .nav-link-article{
+    font-weight: bolder;
+  }
+}

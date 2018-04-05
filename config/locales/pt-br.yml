@@ -1,0 +1,322 @@
+pt-br:
+  language_text: 'Linguagem'
+  language_ptbr: 'Português'
+  language_en: 'Inglês'
+  language_es: 'Espanhol'
+  begginer: 'Iniciante'
+  upper_begginer: 'Iniciante Avançado'
+  intermediate: 'Intermediário'
+  upper_intermediate: 'Intermediário Avançado'
+  advanced: 'Avançado'
+  upper_advanced: 'Avançado Superior'
+  native: 'Nativo'
+  music: 'música'
+  travel: 'viagem'
+  news: 'noticias'
+  tv_radio: 'tv e radio'
+  film: 'filmes'
+  book: 'livros'
+  podcast: 'podcast'
+  humor: 'humor'
+  documentaries: 'documentarios'
+  posts: 'artigos'
+  animation: 'animações'
+  quotes: 'citações'
+  stories: 'histórias'
+  others: 'outros'
+  sure?: 'Tem certeza?'
+  my_rooms: 'Minhas salas'
+  my_debates: 'Meus debates'
+  my_articles: 'Mues artigos'
+  rooms_text: Salas
+  articles_text: Artigos
+  suggestions: Sugestões?
+  create_room: Criar nova sala
+  more_rooms: 'Mais salas'
+  create_debates: 'Criar debate'
+  more_debates: 'Mais debates'
+  create_article: 'Criar artigo'
+  more_articles: 'Mais artigos'
+  continue: Continuar
+  result_not_found: Nenhum resultado foi encontrado
+  application:
+    hello: 'Olá'
+    signup: 'Criar conta'
+    signup_with: 'Logar com %{kind}'
+    loginin: 'Logar'
+    logout: 'Sair'
+    invalid_infos: 'Email ou senha invalida(s)'
+    settings: 'Configurações'
+    ideia: Ideia
+    team: Equipe
+    contact: Contato
+    contribute: Contribuir
+  more_information:
+    almost_there: 'Quase lá'
+    info_about_u: 'Precisamos de mais algumas informações importantes sobre você' 
+    where_u_from: 'De onde você é?'
+    language_study: 'Qual idioma que está estudando?'
+    main_language: 'Qual idioma que você domina?'
+  room_form:
+    create_room_description: 'É preciso compartilhar o link da sala que você criou, dessa forma, outras pessoas podem entrar. Para tanto, siga os próximos passos'
+    step_1: Certifique-se de ter uma conta
+    step_2: Vá até o
+    step_3: Crie uma sala e copie o seu link, dessa forma
+    step_4: Cole o link no campo deste formulario
+    step_5: Compartilhe nas suas redes sociais ou através do link
+    copy: Copiar
+    what_is_it: O que é isso?
+  users:
+    show:
+      recents_rooms: 'Últimas salas'
+    update:
+      notice: "Usuário atualizado com sucesso"
+  rooms:
+    create:
+      notice: Sala criada com sucesso
+    update:
+      notice: Sala atualizada com sucesso
+    destroy:
+      notice: Sala apagada com sucesso
+  debates:
+    create:
+      notice: Debate criada com sucesso
+    update:
+      notice: Debate atualizada com sucesso
+    destroy:
+      notice: Debate apagada com sucesso
+  articles:
+    create:
+      notice: Artigo criada com sucesso
+    update:
+      notice: Artigo atualizada com sucesso
+    destroy:
+      notice: Artigo apagada com sucesso
+  activerecord:
+    models:
+      user: 'Usuário'
+      room: 'Sala'
+    attributes:
+      room:
+        level: 'Nivel'
+        language: 'Linguagem'
+      language:
+        level: Nivel
+        speak: Fala
+        write: Escrita
+      posting:
+        category: Categoria
+        language: Linguagem
+      user:
+        first_name: 'Primeiro nome'
+        last_name: 'Sobrenome'
+        gender: 'Sexo'
+        born_on: 'Data de nascimento'
+        country: 'País'
+        phone: 'Telefone'
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Não é possível excluir o registro pois existe um %{record} dependente
+          has_many: Não é possível excluir o registro pois existem %{record} dependentes
+  date:
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_month_names:
+    -
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda-feira
+    - Terça-feira
+    - Quarta-feira
+    - Quinta-feira
+    - Sexta-feira
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %B"
+    month_names:
+    -
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      about_x_months:
+        one: aproximadamente 1 mês
+        other: aproximadamente %{count} meses
+      about_x_years:
+        one: aproximadamente 1 ano
+        other: aproximadamente %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      x_days:
+        one: 1 dia
+        other: "%{count} dias"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mês
+        other: "%{count} meses"
+      x_years:
+        one: 1 ano
+        other: "%{count} anos"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: deve ser aceito
+      blank: não pode ficar em branco
+      present: deve ficar em branco
+      confirmation: não é igual a %{attribute}
+      empty: não pode ficar vazio
+      equal_to: deve ser igual a %{count}
+      even: deve ser par
+      exclusion: não está disponível
+      greater_than: deve ser maior que %{count}
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}
+      inclusion: não está incluído na lista
+      invalid: não é válido
+      less_than: deve ser menor que %{count}
+      less_than_or_equal_to: deve ser menor ou igual a %{count}
+      model_invalid: 'A validação falhou: %{errors}'
+      not_a_number: não é um número
+      not_an_integer: não é um número inteiro
+      odd: deve ser ímpar
+      required: é obrigatório(a)
+      taken: já está em uso
+      too_long:
+        one: 'é muito longo (máximo: 1 caracter)'
+        other: 'é muito longo (máximo: %{count} caracteres)'
+      too_short:
+        one: 'é muito curto (mínimo: 1 caracter)'
+        other: 'é muito curto (mínimo: %{count} caracteres)'
+      wrong_length:
+        one: não possui o tamanho esperado (1 caracter)
+        other: não possui o tamanho esperado (%{count} caracteres)
+      other_than: deve ser diferente de %{count}
+  helpers:
+    select:
+      prompt: Por favor selecione
+    submit:
+      create: Criar %{model}
+      submit: Salvar %{model}
+      update: Atualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: R$
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion:
+            one: bilhão
+            other: bilhões
+          million:
+            one: milhão
+            other: milhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+          thousand: mil
+          trillion:
+            one: trilhão
+            other: trilhões
+          unit: ''
+      format:
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: "."
+        format: "%n%"
+    precision:
+      format:
+        delimiter: "."
+  support:
+    array:
+      last_word_connector: " e "
+      two_words_connector: " e "
+      words_connector: ", "
+  time:
+    am: ''
+    formats:
+      default: "%a, %d de %B de %Y, %H:%M:%S %z"
+      long: "%d de %B de %Y, %H:%M"
+      short: "%d de %B, %H:%M"
+    pm: ''

@@ -1,0 +1,37 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap";
+@import "font-awesome";
+
+// ABSTRACT
+@import 'abstract/variables';
+@import 'abstract/functions';
+@import 'abstract/fonts';
+@import 'abstract/colors';
+@import 'abstract/positions';
+@import 'abstract/visibility';
+@import 'abstract/shape';
+
+// VIEWS
+// home
+@import "views/home/index";
+
+// main
+@import "views/main/main";
+@import "views/main/authentication";
+@import "views/main/nav_bar";
+@import "views/main/footer";
+@import "views/main/errors";
+
+// shared
+@import "views/shared/cards";
+@import "views/shared/language_fields";
+
+// rooms
+@import "views/rooms/index";
+@import "views/rooms/form";
+
+// users
+@import "views/users/show";
+@import "views/users/my_rooms";
+@import "views/users/my_debates";
+@import "views/users/my_articles";

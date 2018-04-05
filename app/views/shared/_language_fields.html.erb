@@ -1,0 +1,12 @@
+<div class="col-lg-3">
+  <%= f.label Language.human_attribute_name(:speak) %><br />
+  <%= f.select(:speak, [], {}, { :class => 'custom-select' }) do %>
+    <%= options_for_select(numbers_levels, f.object.speak) %>
+  <% end %>
+</div>
+<div class="col-lg-3">
+  <%= f.label Language.human_attribute_name(:write) %><br />
+  <%= f.select(:write, [], {}, { :class => 'custom-select' }) do %>
+    <%= options_for_select(numbers_levels, f.object.write) %>
+  <% end %>
+</div>

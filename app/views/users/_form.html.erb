@@ -1,0 +1,95 @@
+<%= form_with(model: user, local: true) do |f| %>
+  <%= render partial: "shared/form_messages", locals: {model: user} %>
+
+  <div class="form-group">
+    <%= f.label :avatar %><br />
+    <%= f.file_field :avatar , class: 'form-control input-lg' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true, class: 'form-control input-lg', placeholder: "Your username" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, class: 'form-control input-lg', placeholder: "Email" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label User.human_attribute_name(:first_name) %><br />
+    <%= f.text_field :first_name, class: 'form-control input-lg', placeholder: "First Name" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label User.human_attribute_name(:last_name) %><br />
+    <%= f.text_field :last_name, class: 'form-control input-lg', placeholder: "Last Name" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label User.human_attribute_name(:gender) %><br />
+    <%= radio_button("user", "gender", 0, class: 'radio-inline', checked: f.object.gender == "M") %> M
+    <%= radio_button("user", "gender", 1, class: 'radio-inline', checked: f.object.gender == "F") %> F
+  </div>
+
+  <div class="form-group">
+    <%= f.label User.human_attribute_name(:born_on) %><br />
+    <%= date_select "user", "born_on", {
+          order: [:day, :month, :year], start_year: Date.current.year, end_year: Date.current.year - 100
+        }, { class: 'custom-select' } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio, class: 'form-control input-lg', placeholder: "Bio" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label User.human_attribute_name(:phone) %><br />
+    <%= f.text_field :phone, class: 'form-control input-lg', placeholder: "Phone" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label User.human_attribute_name(:country) %><br />
+    <%= f.select(:country, [], {}, { class: 'custom-select' }) do %>
+      <%= options_for_select(select_countries, f.object.country) %>
+    <% end %>
+  </div>
+  <hr>
+  <div class="form-group">
+    <h5 for=""> idioma que está estudando </h5>
+    <br>
+    <div class="user_languages_studieds">
+      <%= f.fields_for :user_languages_studieds do |ff| %>
+        <%= render partial: 'shared/languages_studieds_fields', locals: {f: ff} %>
+        <br>
+      <% end %>
+    </div>
+    <%= link_to_add_association 'Add', f, :user_languages_studieds, class: 'btn btn-bnativus', partial: 'shared/languages_studieds_fields',
+        data: { association_insertion_node: '.user_languages_studieds', association_insertion_method: :append } %>
+  </div>
+  <hr>
+  <div class="form-group">
+    <h5 for=""> idioma que você domina </h5>
+    <br>
+    <div class="user_known_languages">
+      <%= f.fields_for :user_known_languages do |ff| %>
+        <%= render partial: 'shared/known_languages_fields', locals: {f: ff} %>
+        <br>
+      <% end %>
+    </div>
+    <%= link_to_add_association 'Add', f, :user_known_languages, class: 'btn btn-bnativus', partial: 'shared/known_languages_fields',
+        data: { association_insertion_node: '.user_known_languages', association_insertion_method: :append } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Done", class: 'btn btn-success' %>
+  </div>
+<% end %>
+
+  <hr>
+  <h4> Account </h4>
+  <br>
+  <!-- FIXME: change password -->
+
+  <%= button_to "Cancel my account", registration_path(user), data: { confirm: t('sure?') }, method: :delete, class: 'btn btn-danger' %>

@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsWebApp</title>
+    <title>Bnativus beta</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag Ckeditor.cdn_url %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <%= content_tag :body, id: controller_name, data: { action: action_name, controller: controller_name } do %>
+    <%= render 'layouts/nav_bar' %>
+    
+    <div class="main-div mt-5 mb-5">
+      <div class="container">
+        <%= render 'layouts/flash_messages' %>
+      </div>
+      <%= yield %>
+    </div>
+
+    <% unless show_footer?(action_name, controller_name) %>
+      <%= render 'layouts/footer' %>
+    <% end %>
+  <% end %>
 </html>

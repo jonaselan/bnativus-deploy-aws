@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 aside-my-debates">
+      <%= render "users/shared/aside" %>
+    </div>
+    <div class="col-lg-9">
+      <div class="user-main-section container-default">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2> <%= t('my_debates') %> </h2>
+          </div>
+          <div class="col-lg-4">
+            <%= link_to t('create_debate'), new_debate_url, class: 'float-right' %>
+          </div>
+        </div>
+        <div class="row">
+          <%= render partial: "shared/posting/posting_card", collection: @debates, as: :posting %>
+        </div>
+        <div class="more-models">
+          <%= link_to t('more_debates'), debates_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
